@@ -4,50 +4,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title page-title></title>
+    <!-- vendor styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <!-- inspinia admin styles -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body ng-controller="MainCtrl as main">
-
-    <!-- Wrapper-->
+<body ng-controller="MainCtrl as main" class="fixed-nav">
+    <!-- wrapper -->
     <div id="wrapper">
-        <!-- Navigation -->
+        <!-- navigation -->
         <div ng-include="'views/common/navigation.html'"></div>
-        <!-- Page wraper -->
-        <!-- ng-class with current state name give you the ability to extended customization your view -->
+        <!-- page wraper -->
         <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
-            <!-- Page wrapper -->
+            <!-- page wrapper -->
             <div ng-include="'views/common/topnavbar.html'"></div>
-            <!-- Main view  -->
+            <!-- main view -->
             <div ui-view></div>
-            <!-- Footer -->
+            <!-- footer -->
             <div ng-include="'views/common/footer.html'"></div>
-        </div><!-- End page wrapper-->
-    </div><!-- End wrapper-->
-
-    <!-- jQuery and Bootstrap -->
+        </div>
+        <!-- end page wrapper-->
+    </div>
+    <!-- end wrapper-->
+    <!-- vendor scripts and plugins -->
     <script src="js/jquery/jquery-2.1.1.min.js"></script>
     <script src="js/plugins/jquery-ui/jquery-ui.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- MetsiMenu -->
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <!-- Peace JS -->
     <script src="js/plugins/pace/pace.min.js"></script>
-    <!-- SlimScroll -->
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- Custom js -->
     <script src="js/inspinia.js"></script>
-    <!-- Angular Dependiences -->
     <script src="js/angular/angular.min.js"></script>
     <script src="js/ui-router/angular-ui-router.min.js"></script>
     <script src="js/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
-    <!-- Angular scripts -->
+    <!-- angular app -->
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/controllers.js"></script>
-    
 </body>
 </html>

@@ -1,26 +1,45 @@
-function config($stateProvider, $urlRouterProvider) {
+angular.module('portfolio')
+.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/main");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
     .state('main', {
-        url: "/main",
+        url: "/",
         templateUrl: "views/main.html",
         data: {
-            pageTitle: 'Example view'
+            pageTitle: 'About'
         }
     })
-    .state('minor', {
-        url: "/minor",
-        templateUrl: "views/minor.html",
+    .state('education', {
+        url: "/education",
+        templateUrl: "views/education.html",
         data: {
-            pageTitle: 'Example view'
+            pageTitle: 'Education'
         }
     })
-}
-
-angular.module('portfolio')
-.config(config)
+    .state('projects', {
+        url: "/projects",
+        templateUrl: "views/projects.html",
+        data: {
+            pageTitle: 'Projects'
+        }
+    })
+    .state('resume', {
+        url: "/resume",
+        templateUrl: "views/resume.html",
+        data: {
+            pageTitle: 'Resume'
+        }
+    })
+    .state('contact', {
+        url: "/contact",
+        templateUrl: "views/contact.html",
+        data: {
+            pageTitle: 'Contact'
+        }
+    })
+})
 .run(function($rootScope, $state) {
     $rootScope.$state = $state;
 });

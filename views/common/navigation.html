@@ -3,32 +3,51 @@
         <ul side-navigation class="nav" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element">
-                    <!-- Picture of user -->
-                    <!--<img alt="image" class="img-circle" src="img/profile_small.jpg"/>-->
+                    <img alt="image" class="img-circle" height="48" width="48" src="img/avatar.jpeg"/>
                     <a class="dropdown-toggle" href>
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold">{{main.userName}}</strong>
-                             </span>
-                             <span class="text-muted text-xs block">Example menu<b class="caret"></b></span>
+                                <strong class="font-bold text-lt">{{main.userName}}</strong>
+                                <b class="caret"></b>
+                            </span>
+                            <span class="text-muted text-xs block">Developer / Student</span>
                         </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="">Logout</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
+                        <li><a href="">Github</a></li>
                     </ul>
                 </div>
-                <div class="logo-element">IN+</div>
             </li>
             <li ui-sref-active="active">
                 <a ui-sref="main">
-                    <i class="fa fa-laptop"></i>
-                    <span class="nav-label">Main page</span>
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">About</span>
                 </a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="minor">
-                    <i class="fa fa-desktop"></i>
-                    <span class="nav-label">Minor page</span>
+                <a ui-sref="education">
+                    <i class="fa fa-graduation-cap"></i>
+                    <span class="nav-label">Education</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="projects">
+                    <i class="fa fa-folder-open"></i>
+                    <span class="nav-label">Projects</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="resume">
+                    <i class="fa fa-file"></i>
+                    <span class="nav-label">Resume</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="contact">
+                    <i class="fa fa-envelope"></i>
+                    <span class="nav-label">Contact</span>
                 </a>
             </li>
         </ul>

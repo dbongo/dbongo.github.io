@@ -1,4 +1,5 @@
-function pageTitle($rootScope, $timeout) {
+angular.module('portfolio')
+.directive('pageTitle', function pageTitle($rootScope, $timeout) {
     return {
         link: function(scope, element) {
             var listener = function(event, toState, toParams, fromState, fromParams) {
@@ -12,18 +13,16 @@ function pageTitle($rootScope, $timeout) {
             $rootScope.$on('$stateChangeStart', listener);
         }
     }
-}
-
-function sideNavigation() {
+})
+.directive('sideNavigation', function sideNavigation() {
     return {
         restrict: 'A',
         link: function(scope, element) {
             element.metisMenu();
         }
     };
-}
-
-function iboxTools($timeout) {
+})
+.directive('iboxTools', function iboxTools($timeout) {
     return {
         restrict: 'A',
         scope: true,
@@ -33,7 +32,6 @@ function iboxTools($timeout) {
                 var ibox = $element.closest('div.ibox');
                 var icon = $element.find('i:first');
                 var content = ibox.find('div.ibox-content');
-
                 content.slideToggle(200);
                 icon.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
                 ibox.toggleClass('').toggleClass('border-bottom');
@@ -48,9 +46,8 @@ function iboxTools($timeout) {
             }
         }
     }
-}
-
-function minimalizaSidebar($timeout) {
+})
+.directive('minimalizaSidebar', function minimalizaSidebar($timeout) {
     return {
         restrict: 'A',
         template: '<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="" ng-click="minimalize()"><i class="fa fa-bars"></i></a>',
@@ -66,10 +63,4 @@ function minimalizaSidebar($timeout) {
             }
         }
     }
-}
-
-angular.module('portfolio')
-.directive('pageTitle', pageTitle)
-.directive('sideNavigation', sideNavigation)
-.directive('iboxTools', iboxTools)
-.directive('minimalizaSidebar', minimalizaSidebar)
+})
